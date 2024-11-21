@@ -3,6 +3,7 @@
   hosts: localhost
   gather_facts: False
   connection: local  
+  
   tasks:
   - name: Save host data within a Group
     add_host:
