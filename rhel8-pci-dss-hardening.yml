@@ -13,7 +13,6 @@
   - name: Wait for SSH to come up
     wait_for: host={{ vm_ip }} port=22 delay=10 timeout=60
 
-- name: RHEL8 PCI-DSS Hardening
-  hosts: hardening_servers
+- hosts: hardening_servers
   roles:
-  - { role: RedHatOfficial.rhel8_pci_dss }
+     - { role: RedHatOfficial.rhel8_pci_dss }
