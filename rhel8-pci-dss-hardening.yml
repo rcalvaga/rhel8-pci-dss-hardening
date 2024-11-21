@@ -10,12 +10,12 @@
       hostname: "{{ vm_ip }}"
       groupname: hardening_servers
     tags:
-      - getting_vm_ip
+    - getting_vm_ip
 
   - name: Wait for SSH to come up
     wait_for: host={{ vm_ip }} port=22 delay=10 timeout=60
     tags:
-      - getting_vm_ip
+    - getting_vm_ip
 
 - name: RHEL8 PCI-DSS Hardening
   hosts: hardening_servers
