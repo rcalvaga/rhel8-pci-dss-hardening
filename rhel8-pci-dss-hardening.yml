@@ -13,6 +13,4 @@
   - name: Wait for SSH to come up
     wait_for: host={{ vm_ip }} port=22 delay=10 timeout=60
 
-- hosts: hardening_servers
-  roles:
-     - { role: RedHatOfficial.rhel8_pci_dss }
+
